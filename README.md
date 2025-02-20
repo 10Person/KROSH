@@ -8,6 +8,8 @@ or
 Chosen solely to refrence one of my favorite cartoon characters from when I was young. (Please don't sue me.)
 That's literally the only reason.
 
+# Special thanks to: nanobyte: https://www.youtube.com/@nanobyte-dev for teaching me!
+
 # Current Status:
 Just booting to HALT, the equivalent of "Hello, World!" for OS-dev.
 
