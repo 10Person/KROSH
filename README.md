@@ -6,10 +6,10 @@ or
 **Kr(alin's) O(perating) S(ystem) - H(i)**
 
 Chosen solely to refrence one of my favorite cartoon characters from when I was young. (Please don't sue me.)
-That's the only reason.
+That's literally the only reason.
 
 # Current Status:
-Just booting to a HLT message, the equivalent of "Hello, World!" for OS-dev.
+Just booting to HALT, the equivalent of "Hello, World!" for OS-dev.
 
 
 # Design: 
