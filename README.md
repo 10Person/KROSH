@@ -5,13 +5,13 @@ or
 
 **Kr(alin's) O(perating) S(ystem) - H(i)**
 
-Chosen solely to refrence one of my favorite cartoon characters from when I was young. (Please don't sue me.)
+The name was chosen solely to refrence one of my favorite cartoon characters from when I was young. (Please don't sue me.)
 That's literally the only reason.
 
 # Special thanks to: nanobyte: https://www.youtube.com/@nanobyte-dev for teaching me!
 
 # Current Status:
-Just booting to HALT, the equivalent of "Hello, World!" for OS-dev.
+Just printing "Hello, World!", which is surprisingly hard for OS-dev.
 
 
 # Design: 
