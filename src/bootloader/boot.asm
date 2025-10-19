@@ -82,6 +82,48 @@ main:
 	jmp .halt
 
 
+;
+;	DISK ROUTINES!
+;
+
+; Converts linear block address to a cylinder-head-sector address.
+; Parameters: -ax, LBA addrs.
+; Returns:	  -cx [bits 0-5]:  sector number
+;			  -cx [bits 6-15]: cylinder number
+;			  -dh:			   head.
+; sector = (LBA % SectorsPerTrack) + 1
+; head   = (LBA / SectorsPerTrack) % heads
+; cylinder = (LBA / SectorsPerTrack) / heads
+lba_to_chs:
+
+	push ax
+	push dx
+	
+	xor dx, dx 								; dx -> 0
+	div word [bdb_sectors_per_track]		; ax = LBA / SectorsPerTrack
+											; dx = LBA % SectorsPerTrack
+
+	inc dx									; dx =  LBA % SectorsPerTrack + 1 = sector
+	mov cx, dx								; cx <- dx = sector.
+
+	xor dx, dx								; set dx back to 0.
+	div word [bdb_heads]					; ax = cylinder = (LBA / SectorsPerTrack) / heads
+											; dx = (LBA / SectorsPerTrack) % heads = head.
+	
+	mov dh, dl ; dh <- dl					; dh =head
+	mov ch, al								; ch = cylinder (lower 8 bits)
+	shl ah, 6								; shift upper 6 bits to the left.
+	or  cl, ah								; put upper 2 bit sof cylinger into CL
+
+	pop ax
+	mov dl, al								; restore DL
+	pop ax,
+	ret
+
+
+; Reads from the disk. (Left off at 17:52)
+
+
 msg_hello: db  'Hello, World!', ENDL, 0
 	
 
