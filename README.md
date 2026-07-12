@@ -10,7 +10,7 @@ That's literally the only reason.
 
 # Special thanks to: nanobyte: https://www.youtube.com/@nanobyte-dev for teaching me!
 
-# Current Status:
+# Current Status: IS EFFECTIVELY ABANDONED FOR THE NEAR FUTURE.
 Just printing "Hello, World!", which is surprisingly hard for OS-dev.
 
 
